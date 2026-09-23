@@ -50,21 +50,10 @@ fun NireAplikazioa() {
             startDestination = "home",
             modifier = Modifier.padding(innerPadding)
         ) {
-            composable("home") {
-                HomeScreen()
-            }
-
-            composable("aukera1") {
-                Aukera1Screen()
-            }
-
-            composable("aukera2") {
-                Aukera2Screen()
-            }
-
-            composable("aukera3") {
-                Aukera3Screen()
-            }
+            composable("home") { HomeScreen() }
+            composable("aukera1") { Aukera1Screen() }
+            composable("aukera2") { Aukera2Screen() }
+            composable("aukera3") { Aukera3Screen() }
         }
     }
 }
