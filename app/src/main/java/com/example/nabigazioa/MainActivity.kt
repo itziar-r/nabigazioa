@@ -68,24 +68,49 @@ fun BottomNavBar(navController: NavHostController) {
         NavigationBarItem(
             icon = { Icon(painterResource(R.drawable.home), contentDescription = "Home") },
             selected = currentRoute == "home",
-            onClick = { navController.navigate("home")},
+            onClick = {
+                navController.navigate("home") {
+                    popUpTo(navController.graph.startDestinationId) { saveState = true }
+                    launchSingleTop = true
+                    restoreState = true
+                }
+            },
             label = { Text("Home") }
         )
+        //BESTE AUKERAK
         NavigationBarItem(
             selected = currentRoute == "aukera1",
-            onClick = { navController.navigate("aukera1") },
+            onClick = {
+                navController.navigate("aukera1") {
+                    popUpTo(navController.graph.startDestinationId) { saveState = true }
+                    launchSingleTop = true
+                    restoreState = true
+                }
+            },
             icon = { Icon(painterResource(R.drawable.counter_1), contentDescription = "Aukera 1") },
             label = { Text("Aukera 1") }
         )
         NavigationBarItem(
             selected = currentRoute == "aukera2",
-            onClick = { navController.navigate("aukera2") },
+            onClick = {
+                navController.navigate("aukera2") {
+                    popUpTo(navController.graph.startDestinationId) { saveState = true }
+                    launchSingleTop = true
+                    restoreState = true
+                }
+            },
             icon = { Icon(painterResource(R.drawable.counter_2), contentDescription = "Aukera 2") },
             label = { Text("Aukera 2") }
         )
         NavigationBarItem(
             selected = currentRoute == "aukera3",
-            onClick = { navController.navigate("aukera3") },
+            onClick = {
+                navController.navigate("aukera3") {
+                    popUpTo(navController.graph.startDestinationId) { saveState = true }
+                    launchSingleTop = true
+                    restoreState = true
+                }
+            },
             icon = { Icon(painterResource(R.drawable.counter_3), contentDescription = "Aukera 3") },
             label = { Text("Aukera 3") }
         )
